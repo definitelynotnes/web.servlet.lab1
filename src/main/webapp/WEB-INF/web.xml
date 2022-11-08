@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="jee.web.blueprint" version="3.1">
+  <display-name>webshoppe-commerce</display-name>
+  <servlet>
+    <servlet-name>ToyCatalogServlet</servlet-name>
+    <servlet-class>com.webshoppe.ecommerce.servlet.ToyCatalogServlet</servlet-class>
+    <init-param>
+        <param-name>choice</param-name>
+        <param-value>Toy</param-value>
+    </init-param>
+    <init-param>
+        <param-name>Toy</param-name>
+        <param-value>Toy</param-value>
+    </init-param>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>BookCatalogServlet</servlet-name>
+    <servlet-class>com.webshoppe.ecommerce.servlet.BookCatalogServlet</servlet-class>
+    <init-param>
+        <param-name>choice</param-name>
+        <param-value>Book</param-value>
+    </init-param>
+    <init-param>
+        <param-name>Book</param-name>
+        <param-value>/book-catalog</param-value>
+    </init-param>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>FlowerCatalogServlet</servlet-name>
+    <servlet-class>com.webshoppe.ecommerce.servlet.FlowerCatalogServlet</servlet-class>
+    <init-param>
+        <param-name>selection</param-name>
+        <param-value>Flower</param-value>
+    </init-param>
+    <init-param>
+        <param-name>Flower</param-name>
+        <param-value>/flower-catalog</param-value>
+    </init-param>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ToyCatalogServlet</servlet-name>
+    <url-pattern>/toy-catalog</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookCatalogServlet</servlet-name>
+    <url-pattern>/book-catalog</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FlowerCatalogServlet</servlet-name>
+    <url-pattern>/flower-catalog</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+</web-app>
